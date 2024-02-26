@@ -1,11 +1,9 @@
 package org.example;
 
-public class Car extends ServiceStation {
-    public String modelName;
-    public int wheelsCount;
+public class Car extends Bicycle {
 
-    public void updateTyre() {
-        System.out.println("Меняем колесо");
+    public Car() {
+        super();
     }
 
     public void checkEngine() {
