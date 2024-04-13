@@ -1,24 +1,23 @@
 package org.example.throwingExceptions;
 
 public class ExceptionClass {
-    String login, password, confirmPassword;
+    private static final String login = "Java_language_of_123";
+    private static final String password = "12345678901234567890";
+    private static final String confirmPassword = "12345678901234567890";
+    private static final int size = 20;
 
-    public ExceptionClass(String login,String password,String confirmPassword) {
-        this.login = login;
-        this.password = password;
-        this.confirmPassword = confirmPassword;
-    }
+    public ExceptionClass() {}
 
     public static void showExceptionThrown(String login,String password,String confirmPassword) {
-        if(login.length() > 4 || !login.equals(login)) {
+        if((login.length() > size ) || !login.equals(login)) {
             throw new WrongLoginException("");
         }
-        if (password.length() > 4 || !password.equals(confirmPassword)) {
+        if (password.length() > size || !password.equals(confirmPassword)) {
             throw new WrongPasswordException("");
         }
     }
 
-    public static void interception(String s) {
+    public static void interception() {
         System.out.println("Worked method interception()");
         try {
             showExceptionThrown("","","");
@@ -30,9 +29,8 @@ public class ExceptionClass {
     }
 
     public static void main(String[] args) {
-        ExceptionClass ex = new ExceptionClass("Java","1234","1234");
-        showExceptionThrown(ex.login, ex.password, ex.confirmPassword);
-        interception("");
+         showExceptionThrown(login,password,confirmPassword);
+         interception();
     }
 
 }
