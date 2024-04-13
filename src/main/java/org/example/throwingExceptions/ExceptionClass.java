@@ -9,7 +9,7 @@ public class ExceptionClass {
     public ExceptionClass() {}
 
     public static void showExceptionThrown(String login,String password,String confirmPassword) {
-        if((login.length() > size ) || !login.equals(login)) {
+        if(login.length() > size ) {
             throw new WrongLoginException("");
         }
         if (password.length() > size || !password.equals(confirmPassword)) {
