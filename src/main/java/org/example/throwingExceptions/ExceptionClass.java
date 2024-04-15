@@ -20,8 +20,10 @@ public class ExceptionClass {
     public static void interception() {
         System.out.println("Worked method interception()");
         try {
-            showExceptionThrown("","","");
+            showExceptionThrown("Java_language_of_123","12345678901234567890",
+                    "12345678901234567890");
         } catch (WrongLoginException | WrongPasswordException e) {
+            //noinspection ThrowablePrintedToSystemOut
             System.out.println(e);
         } finally {
             System.out.println("Verification completed!");
