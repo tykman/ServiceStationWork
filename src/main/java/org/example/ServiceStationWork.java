@@ -24,14 +24,11 @@ public class ServiceStationWork {
         truck1.wheelsCount = 8;
 
         ServiceStation station = new ServiceStation();
-        System.out.println("Service Station work!");
-        System.out.println(" ");
         station.check(bicycle,null,null);
         station.check(bicycle1,null,null);
         station.check(null,car,null);
         station.check(null,car1,null);
         station.check(null,null,truck);
         station.check(null,null,truck1);
-        System.out.println("Service Station closed!");
     }
 }
